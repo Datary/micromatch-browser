@@ -1,0 +1,38 @@
+{
+  "name": "micromatch-browser",
+  "version": "0.1.1",
+  "description": "Client-side micromatch port",
+  "main": "index.js",
+  "author": "Fernando Diaz <peke_buda@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "log"
+  ],
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "aws-sdk": "^2.4.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "micromatch": "^2.3.8",
+    "vinyl-transform": "^1.0.0",
+    "yargs": "^4.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "g:browserify": "node node_modules/.bin/gulp browserify",
+    "g:distify": "node node_modules/.bin/gulp distify",
+    "g:publish": "node node_modules/.bin/gulp publish --version latest",
+    "s:browserify": "node node_modules/.bin/browserify index.js -o dist/micromatch-browser.js",
+    "s:distify": "node node_modules/.bin/uglifyjs dist/micromatch-browser.js -o dist/micromatch-browser.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datary/micromatch-browser"
+  },
+  "bugs": {
+    "url": "https://github.com/datary/micromatch-browser"
+  }
+}
